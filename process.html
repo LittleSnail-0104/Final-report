@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我的成果報告</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Microsoft JhengHei", "Segoe UI", sans-serif;
+      background-color: #dcdcd6;
+      min-height: 100vh;
+    }
+
+    /* 導覽列樣式 */
+    .menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      z-index: 999;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .logo:hover {
+      color: #ffcc00;
+    }
+
+    /* 漢堡選單按鈕樣式 */
+    #menu-toggle {
+      display: none;
+    }
+
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5em;
+      color: white;
+    }
+
+    .menu ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+      padding: 8px 15px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .menu ul li a:hover {
+      color: #ffcc00;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .menu ul li a.active {
+      background-color: #ffcc00;
+      color: black;
+    }
+
+    /* 封面圖片 */
+    .hero {
+      margin-top: 70px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .hero img:hover {
+      transform: scale(1.02);
+    }
+
+    /* 手機版樣式 */
+    @media screen and (max-width: 768px) {
+      .menu {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      #menu-toggle:checked + .menu-icon + ul {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: block;
+      }
+
+      .hero {
+        margin-top: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 導覽列 -->
+  <nav class="menu">
+    <div class="logo">我的成果報告</div>
+
+    <!-- 漢堡選單控制 -->
+    <input type="checkbox" id="menu-toggle" />
+    <label class="menu-icon" for="menu-toggle">☰</label>
+
+    <ul>
+      <li><a href="homework.html" class="active">首頁</a></li>
+      <li><a href="work01.html">css(1)</a></li>
+      <li><a href="work01-2.html">css(1-2)</a></li>
+      <li><a href="work02.html">css(2)</a></li>
+      <li><a href="work02-2.html">css(2-2)</a></li>
+      <li><a href="html01.html">html(1)</a></li>
+      <li><a href="html02.html">html(2)</a></li>
+      <li><a href="script01.html">script(1)</a></li>
+      <li><a href="script02.html">script(2)</a></li>
+      <li><a href="process.html">過程</a></li>
+      <li><a href="reflection.html">心得</a></li>
+    </ul>
+  </nav>
+
+  <!-- 封面圖片 -->
+  <div class="hero">
+    <img src="pro.jpg" alt="成果報告封面">
+  </div>
+</body>
+</html>
